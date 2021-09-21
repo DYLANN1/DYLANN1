@@ -38,7 +38,7 @@
             "field": "lat",
             "type": "quantitative"
           },
-          "size": {"value": 8},
+          "size": {"value": 15},
           "color": {"value": "steelblue"}
         }
       }
