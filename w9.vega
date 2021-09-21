@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 1300,
+    "height": 900,
+    "title": "UFO SIGHTINGS IN USA",
+    "layer": [
+      {
+        "data": {
+          "url": "us-10m.json",
+          "format": {
+            "type": "topojson",
+            "feature": "states"
+          }
+        },
+        "projection": {
+          "type": "albersUsa"
+        },
+        "mark": {
+          "type": "geoshape",
+          "fill": "lightgray",
+          "stroke": "white"
+        }
+      },
+      {
+        "data": {
+          "url": "UFO.xlsx"
+        },
+        "projection": {
+          "type": "albersUsa"
+        },
+        "mark": "circle",
+        "encoding": {
+          "longitude": {
+            "field": "city_longitude",
+            "type": "quantitative"
+          },
+          "latitude": {
+            "field": "city_latitude",
+            "type": "quantitative"
+          },
+          "size": {"value": 8},
+          "color": {"value": "steelblue"}
+        }
+      }
+    ]
+  }
