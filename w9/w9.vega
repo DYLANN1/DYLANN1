@@ -23,7 +23,7 @@
       },
       {
         "data": {
-          "url": "UFO.csv"
+          "url": "UFO.xlsx"
         },
         "projection": {
           "type": "albersUsa"
