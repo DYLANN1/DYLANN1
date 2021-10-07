@@ -40,8 +40,7 @@
             "align":"right",
             "yOffset":-10,
             "xOffset": 10,
-            "fontSize":11.5,
-            "fontStyle":"italic"
+            "fontSize":11.5
         },
         "encoding": {
             "x": {"field": "Time", "type": "ordinal", "title":"Hour"},
