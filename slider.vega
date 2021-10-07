@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 1260,
+    "width": 600,
     "height": 600,
     "title": "UFO SIGHTINGS AT HOURS OF THE DAY",
     "data": {
@@ -13,7 +13,7 @@
         "bind": {
         "input": "range",
         "min": 0,
-        "max": 24,
+        "max": 23,
         "step": 1,
         "name": "Hour: "
         }
@@ -22,13 +22,33 @@
     "transform": [
         {"filter": "datum.Time >= Hour"}
     ],
-    "mark": "bar",
-    "encoding": {
-        "x": {"field": "Time", "type": "ordinal"},
-        "y": {"field": "Time", "aggregate": "count", "title": "Number of sightings"},
+    "layer":[
+        {
+        "mark": "bar",
+        "encoding": {
+            "x": {"field": "Time", "type": "ordinal", "title":"Hour"},
+            "y": {"field": "Time", "aggregate": "count", "title": "Number of sightings"},
         "tooltip": [
-            {"field": "Time", "type": "ordinal"},
+            {"field": "Time", "type": "ordinal", "title":"Hour"},
             {"aggregate": "count", "field": "Time", "title": "Number of sightings"}
         ]
     }
+    },
+    {
+        "mark":{
+            "type":"text",
+            "align":"right",
+            "yOffset":-10,
+            "xOffset": 10,
+            "fontSize":11.5,
+            "fontStyle":"italic"
+        },
+        "encoding": {
+            "x": {"field": "Time", "type": "ordinal", "title":"Hour"},
+            "y": {"field": "Time", "aggregate": "count", "title": "Number of sightings"},
+            "text":{"field": "Time", "aggregate": "count", "title":"Number of total sightings: "},
+            "color":{"value":"black"}
+        }
+    }
+    ]    
   }
