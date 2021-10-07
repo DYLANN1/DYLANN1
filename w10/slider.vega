@@ -1,0 +1,34 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 1260,
+    "height": 600,
+    "title": "UFO SIGHTINGS AT HOURS OF THE DAY",
+    "data": {
+        "url": "UFO.csv"
+    },
+    "params": [
+        {
+        "name": "Hour",
+        "value": 0,
+        "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 24,
+        "step": 1,
+        "name": "Hour: "
+        }
+        }
+    ],
+    "transform": [
+        {"filter": "datum.Time >= Hour"}
+    ],
+    "mark": "bar",
+    "encoding": {
+        "x": {"field": "Time", "type": "ordinal"},
+        "y": {"field": "Time", "aggregate": "count", "title": "Number of sightings"},
+        "tooltip": [
+            {"field": "Time", "type": "ordinal"},
+            {"aggregate": "count", "field": "Time", "title": "Number of sightings"}
+        ]
+    }
+  }
