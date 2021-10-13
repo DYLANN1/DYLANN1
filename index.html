@@ -12,8 +12,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="layout.css" media="all">
 
@@ -23,24 +24,16 @@
 <!-- side banners-->
 
 <body>
-    
-
-   <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <h1>UFO Sightings in USA </h1>
-        <p>This page demonstrates how you can use pure.css grid for your layout.</p>
-      </div>
-    </div>
-  <!-- end pure grid group -->
-
+  <h1>UFO SIGHTINGS IN USA </h1>
     <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-1-1">
-          <div id="map"></div>
-          <div class="description description-left">
-            <h2>This is the first section</h2>
-            <p>The first column is used for description while the next two columns are merged and used for visualisation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+          <div id="map" class="mid"></div>
+          <div class="text">
+            <p>The map above visualises where every UFO was sighted during 2016. Each red point helps indicate a new state and the dark purple points indicate a sighting.
+              The state is shown whenever a red point is hovered while and the city and full description is shown when a purple point is hovered over.   
+              As seen from the map, the majority of sightings are concentrated near the ocean. 
+            </p>
           </div>
         </div>
     </div>
@@ -49,12 +42,13 @@
     <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-1-1">
-          <div id="bar"></div>
+          <div id="bar" class="mid"></div>
         </div>
         <div class="pure-u-1-1">
-          <div class="description description-right">
-            <h2>This is the second section</h2>
-            <p>Similar to the previous section, but the colum partition is swapped. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+          <div class="text">
+            <p>This bar chart depicts the amount of sightings at different hours of the day. The hour slider featured
+              can narrow down the hour range. The majority of UFO sightings are seen during nighttime hours.
+            </p>
           </div>
         </div>
       
@@ -64,15 +58,16 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-3">
-        <div id="wordcloud"  ></div>
+        <div id="wordcloud" class="mid"></div>
       </div>
       <div class="pure-u-1-3">
-        <div id="pie"  class="vis-container"></div>
+        <div id="pie"  class="mid"></div>
       </div>
       <div class="pure-u-1-1">
-        <div class="description description-left">
-          <h2>This is the third section</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+        <div class="text">
+          <p>The wordcloud depicts the number of times a word has occurred in all the UFO sighting descriptions,
+            the pie chart describes the top 6 sighted UFO shapes and their respective counts.
+          </p>
         </div>
       </div>
     </div>

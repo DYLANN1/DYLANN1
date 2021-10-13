@@ -9,11 +9,12 @@
     "data": {
       "url": "UFO.csv"
     },
+    "transform": [{"filter": "datum.Shape == 'Circle' || datum.Shape == 'Light' || datum.Shape == 'Triangle' || datum.Shape == 'Unknown' || datum.Shape == 'Fireball' || datum.Shape == 'Sphere'"}],
     "mark": {"type":"arc","innerRadius":100},
     "encoding": {
         "color":{
           "field":"Shape",
-          "scale":{"scheme":"paired"},
+          "scale":{"scheme":"set1"},
           "legend":{"offset":-65}},
         "theta": {"aggregate": "count", "title": "Count"},
         "tooltip": [

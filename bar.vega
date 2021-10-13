@@ -34,7 +34,7 @@
                 "axis":{"gridColor":"white"}},
             "color":{
                 "field":"Time",
-                "scale":{"range":["royalblue","green"]},
+                "scale":{"range":["#657cff"]},
                 "legend":null},
             "tooltip": [
                 {"field": "Time", "type": "ordinal", "title":"Hour"},
