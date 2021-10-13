@@ -1,0 +1,72 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 1150,
+    "height": 700,
+    "title": {"text":"UFO SIGHTINGS ACROSS USA",
+            "color":"purple",
+            "fontSize":30},
+    "projection": {
+      "type": "albersUsa"
+    },
+    "background":null,
+    "layer": [
+      {
+        "data": {
+          "url": "us-10m.json",
+          "format": {
+            "type": "topojson",
+            "feature": "states"
+          }
+        },
+        "mark": {
+          "type": "geoshape",
+          "fill": "#5c5c5c",
+          "stroke": "white"
+        }
+      },
+      {
+        "data": {
+          "url": "us-state-capitals.json"
+        },
+        "encoding": {
+          "longitude": {
+            "field": "longitude",
+            "type": "quantitative"
+          },
+          "latitude": {
+            "field": "latitude",
+            "type": "quantitative"
+          },
+          "tooltip":[{"field":"state"}],
+          "size":{"value":80}
+        },
+          "mark": {
+            "type": "circle",
+            "color": "red"
+          }
+      },
+      {
+        "data": {
+          "name":"UFO",
+          "url": "UFO.csv"
+        },
+        "mark": "circle",
+        "encoding": {
+          "longitude": {
+            "field": "lng",
+            "type": "quantitative"
+          },
+          "latitude": {
+            "field": "lat",
+            "type": "quantitative"
+          },
+          "tooltip":[{"field":"City"},{"field":"Summary"}],
+          "size": {"value": 15},
+          "color":{
+            "field":"lng",
+            "scale":{"range":["purple","green"]},
+            "legend":null}
+        }
+      }
+    ]
+  }
