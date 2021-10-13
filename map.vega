@@ -3,7 +3,7 @@
     "width": 1150,
     "height": 700,
     "title": {"text":"UFO SIGHTINGS ACROSS USA",
-            "color":"purple",
+            "color":"#7700ff",
             "fontSize":30},
     "projection": {
       "type": "albersUsa"
@@ -20,7 +20,7 @@
         },
         "mark": {
           "type": "geoshape",
-          "fill": "#becdff",
+          "fill": "#3f6cff",
           "stroke": "white"
         }
       },
@@ -64,7 +64,7 @@
           "size": {"value": 15},
           "color":{
             "field":"lng",
-            "scale":{"range":["purple"]},
+            "scale":{"range":["springgreen"]},
             "legend":null}
         }
       }

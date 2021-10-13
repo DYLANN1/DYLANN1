@@ -2,7 +2,7 @@ html,
 body {
     width: 1300px;
     margin:auto;
-    background-color: #d0e1ff;
+    background-color: #103f91;
 }
 
 .header {
@@ -36,18 +36,19 @@ body {
 
 h1 {
     text-align: center;
-    color: purple;
-    font-size: 40px;
+    color: #7700ff;
+    font-size: 50px;
+    margin-bottom: -10px;
 }
 
 h2 {
     text-align: center;
-    color: purple;
+    color: #7700ff;
     font-size: 25px;
 }
 
 p {
-    color: #000000;
+    color:snow;
     font-size: 16px;
     text-align: center;
     margin: 0px 50px;

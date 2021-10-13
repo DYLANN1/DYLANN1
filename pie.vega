@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 550,
-    "height": 390,
+    "height": 400,
     "background":null,
     "title": {"text":"UFO SHAPES THAT WERE SPOTTED",
-            "color":"purple",
+            "color":"#7700ff",
             "fontSize":25},
     "data": {
       "url": "UFO.csv"
@@ -15,7 +15,10 @@
         "color":{
           "field":"Shape",
           "scale":{"scheme":"set1"},
-          "legend":{"offset":-65}},
+          "legend":{
+            "offset":-65,
+            "titleColor":"white",
+            "labelColor":"white"}},
         "theta": {"aggregate": "count", "title": "Count"},
         "tooltip": [
             {"field":"Shape"},
